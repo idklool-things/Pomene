@@ -1,0 +1,21 @@
+{
+  "songs": [
+    "Pico",
+    "Philly",
+    "Blammed"
+  ],
+  "characters": [
+    "pico",
+    "bf",
+    "gf"
+  ],
+  "storyName": "PICO",
+  "locked": false,
+  "unlockAfter": "",
+  "hide": false,
+  "difficulties": [
+    "Easy",
+    "Normal",
+    "Hard"
+  ]
+}

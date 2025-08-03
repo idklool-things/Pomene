@@ -1,0 +1,21 @@
+{
+  "songs": [
+    "Spookeez",
+    "South",
+    "Monster"
+  ],
+  "characters": [
+    "spooky",
+    "bf",
+    "gf"
+  ],
+  "storyName": "Spooky Month",
+  "locked": false,
+  "unlockAfter": "",
+  "hide": false,
+  "difficulties": [
+    "Easy",
+    "Normal",
+    "Hard"
+  ]
+}

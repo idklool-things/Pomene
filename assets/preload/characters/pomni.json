@@ -1,0 +1,92 @@
+{
+    "frame": "characters/PomniAssets",
+    "anims": [
+        {
+            "name": "idle",
+            "prefix": "Idle",
+            "fps": 15,
+            "loop": true,
+            "indices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "Down",
+            "fps": 24,
+            "loop": false,
+            "indices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "Up",
+            "fps": 24,
+            "loop": false,
+            "indices": []
+        },
+        {
+            "name": "anim1",
+            "prefix": "TheSongPomni",
+            "fps": 24,
+            "loop": false,
+            "indices": []
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "Right",
+            "fps": 24,
+            "loop": false,
+            "indices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "Left",
+            "fps": 24,
+            "loop": false,
+            "indices": []
+        }
+    ],
+    "offsets": {
+        "idle": [
+            0,
+            0
+        ],
+        "singDOWN": [
+            7,
+            -12
+        ],
+        "singUP": [
+            0,
+            8
+        ],
+        "anim1": [
+            23,
+            0
+        ],
+        "singLEFT": [
+            16,
+            -1
+        ],
+        "singRIGHT": [
+            -5,
+            0
+        ]
+    },
+    "antialiasing": true,
+    "flipX": false,
+    "size": 1,
+    "icon": "pomni",
+    "healthColor": [
+        255,
+        97,
+        145
+    ],
+    "pos": [
+        10,
+        210
+    ],
+    "camPos": [
+        -80,
+        40
+    ],
+    "singTime": 4,
+    "danceLeftandRight": false
+}

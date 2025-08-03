@@ -1,0 +1,21 @@
+{
+  "songs": [
+    "Cocoa",
+    "Eggnog",
+    "Winter-Horrorland"
+  ],
+  "characters": [
+    "parents-christmas",
+    "bf",
+    "gf"
+  ],
+  "storyName": "RED SNOW",
+  "locked": false,
+  "unlockAfter": "",
+  "hide": false,
+  "difficulties": [
+    "Easy",
+    "Normal",
+    "Hard"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "songs": [
+    "Bopeebo",
+    "Fresh",
+    "DadBattle"
+  ],
+  "characters": [
+    "dad",
+    "bf",
+    "gf"
+  ],
+  "storyName": "Daddy Dearest",
+  "locked": false,
+  "unlockAfter": "",
+  "hide": false,
+  "difficulties": [
+    "Easy",
+    "Normal",
+    "Hard"
+  ]
+}

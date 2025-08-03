@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="pomni.png">
+	<SubTexture name="pomni0000" x="0" y="0" width="547" height="512" frameX="2" frameY="2" frameWidth="543" frameHeight="508"/>
+	<SubTexture name="pomni0001" x="0" y="0" width="547" height="512" frameX="2" frameY="2" frameWidth="543" frameHeight="508"/>
+	<SubTexture name="pomni0002" x="547" y="0" width="547" height="512" frameX="2" frameY="2" frameWidth="543" frameHeight="508"/>
+	<SubTexture name="pomni0003" x="547" y="0" width="547" height="512" frameX="2" frameY="2" frameWidth="543" frameHeight="508"/>
+</TextureAtlas>
