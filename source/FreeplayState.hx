@@ -157,7 +157,7 @@ class FreeplayState extends MusicBeatState
 
 	function changeDiff(change:Int = 0)
 	{
-		curDifficulty += (change + CoolUtil.difficultyArray.length) % CoolUtil.difficultyArray.length;
+		curDifficulty = (curDifficulty + change + CoolUtil.difficultyArray.length) % CoolUtil.difficultyArray.length;
 
 		/*if (curDifficulty < 0)
 			curDifficulty = CoolUtil.difficultyArray.length-1;

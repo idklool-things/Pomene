@@ -196,7 +196,7 @@ class StoryMenuState extends MusicBeatState {
     }
 
     function changeDifficulty(change:Int = 0):Void {
-        curDifficulty += (change + CoolUtil.difficultyArray.length) % CoolUtil.difficultyArray.length;
+        curDifficulty = (curDifficulty + change + CoolUtil.difficultyArray.length) % CoolUtil.difficultyArray.length;
 
         /*if (curDifficulty < 0) curDifficulty = CoolUtil.difficultyArray.length - 1;
         if (curDifficulty >= CoolUtil.difficultyArray.length) curDifficulty = 0;*/
