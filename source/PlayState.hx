@@ -1085,7 +1085,7 @@ class PlayState extends MusicBeatState
 				if (songNotes[1] > 3)
 					gottaHitNote = !section.mustHitSection;
 
-				var oldNote:Note = unspawnNotes.length > 0 ? unspawnNotes[Std.int(unspawnNotes.length - 1) : null;
+				var oldNote:Note = unspawnNotes.length > 0 ? unspawnNotes[Std.int(unspawnNotes.length - 1)] : null;
 
 				var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote);
 				swagNote.sustainLength = songNotes[2];
