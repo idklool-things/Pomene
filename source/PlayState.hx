@@ -970,7 +970,7 @@ class PlayState extends MusicBeatState
 			var playerVocalPath = Paths.voices(SONG.song, boyfriend.curCharacter.toLowerCase(), CoolUtil.defaultDiff.toLowerCase());
 		    var opponentVocalPath = Paths.voices(SONG.song, dad.curCharacter.toLowerCase(), CoolUtil.defaultDiff.toLowerCase());
 		    if (Assets.exists(opponentVocalPath) == Assets.exists(playerVocalPath))
-		        opponentVocals.volume = 0;
+		        opponentVocals.volume = 0.001;
 		}
 
 		// Song duration in a float, useful for the time left feature
@@ -1085,11 +1085,7 @@ class PlayState extends MusicBeatState
 				if (songNotes[1] > 3)
 					gottaHitNote = !section.mustHitSection;
 
-				var oldNote:Note;
-				if (unspawnNotes.length > 0)
-					oldNote = unspawnNotes[Std.int(unspawnNotes.length - 1)];
-				else
-					oldNote = null;
+				var oldNote:Note = unspawnNotes.length > 0 ? unspawnNotes[Std.int(unspawnNotes.length - 1) : null;
 
 				var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote);
 				swagNote.sustainLength = songNotes[2];
@@ -1834,6 +1830,9 @@ class PlayState extends MusicBeatState
 						if (luaModchart != null)
 							luaModchart.executeState('playerTwoSing', [daNote.noteData, Conductor.songPosition]);
 						#end
+						
+						if (opponentVocals.volume <= 0.001 && playerVocals.volume <= 0.001)
+						    playerVocals.volume = 1;
 
 						dad.holdTimer = 0;
 						for (stage in stagesArray)
