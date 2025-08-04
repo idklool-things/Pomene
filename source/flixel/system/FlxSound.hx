@@ -64,7 +64,7 @@ class FlxSound extends FlxBasic
 	public var amplitudeLeft(default, null):Float;
 
 	/**
-	 * Just the amplitude of the right stereo channel
+	 * Just the amplitude of the left stereo channel
 	 */
 	public var amplitudeRight(default, null):Float;
 
@@ -93,10 +93,12 @@ class FlxSound extends FlxBasic
 	 * Set volume to a value between 0 and 1 to change how this sound is.
 	 */
 	public var volume(get, set):Float;
+	#if FLX_PITCH
 	/**
 	 * Set pitch, which also alters the playback speed. Default is 1.
 	 */
 	public var pitch(get, set):Float;
+	#end
 	/**
 	 * The position in runtime of the music playback in milliseconds.
 	 * If set while paused, changes only come into effect after a `resume()` call.
@@ -173,10 +175,12 @@ class FlxSound extends FlxBasic
 	 * Internal tracker for sound length, so that length can still be obtained while a sound is paused, because _sound becomes null.
 	 */
 	var _length:Float = 0;
+	#if FLX_PITCH
 	/**
 	 * Internal tracker for pitch.
 	 */
 	var _pitch:Float = 1.0;
+	#end
 	/**
 	 * Internal tracker for total volume adjustment.
 	 */
@@ -424,7 +428,9 @@ class FlxSound extends FlxBasic
 		updateTransform();
 		exists = true;
 		onComplete = OnComplete;
+		#if FLX_PITCH
 		pitch = 1;
+		#end
 		_length = (_sound == null) ? 0 : _sound.length;
 		endTime = _length;
 		return this;
@@ -579,7 +585,7 @@ class FlxSound extends FlxBasic
 	/**
 	 * Call after adjusting the volume to update the sound channel's settings.
 	 */
-	@:allow(flixel.sound.FlxSoundGroup)
+	@:allow(flixel.system.FlxSoundGroup)
 	function updateTransform():Void
 	{
 		_transform.volume = #if FLX_SOUND_SYSTEM (FlxG.sound.muted ? 0 : 1) * FlxG.sound.volume * #end
@@ -603,7 +609,9 @@ class FlxSound extends FlxBasic
 		_channel = _sound.play(_time, 0, _transform);
 		if (_channel != null)
 		{
+			#if FLX_PITCH
 			pitch = _pitch;
+			#end
 			_channel.addEventListener(Event.SOUND_COMPLETE, stopped);
 			active = true;
 		}
@@ -727,6 +735,7 @@ class FlxSound extends FlxBasic
 		updateTransform();
 		return Volume;
 	}
+	#if FLX_PITCH
 	inline function get_pitch():Float
 	{
 		return _pitch;
@@ -737,6 +746,7 @@ class FlxSound extends FlxBasic
 	{
 		return _pitch = v;
 	}
+	#end
 
 	inline function get_pan():Float
 	{
